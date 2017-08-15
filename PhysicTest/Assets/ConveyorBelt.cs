@@ -20,7 +20,7 @@ public class ConveyorBelt : MonoBehaviour {
 
     void OnCollisionStay(Collision collided)
     {
-        Debug.Log(GetComponent<Collider>().name + "<->" + collided.rigidbody.name);
+//        Debug.Log(GetComponent<Collider>().name + "<->" + collided.rigidbody.name);
         Debug.DrawRay(collided.transform.position, transform.right * speed, Color.white);
         //collided.rigidbody.MovePosition(collided.transform.position + transform.right * Time.deltaTime * speed);
         collided.rigidbody.AddForce(transform.right * speed, ForceMode.Impulse);
